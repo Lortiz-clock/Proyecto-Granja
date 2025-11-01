@@ -16,7 +16,8 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGranja());
+            Application.Run(new CapaPresentacion.FormEmpleados());
+            //Application.Run(new FormGranja());
         }
     }
 }
