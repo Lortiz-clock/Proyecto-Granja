@@ -71,6 +71,20 @@
     <Compile Include="FormRoles.Designer.cs">
       <DependentUpon>FormRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCultivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCultivos.Designer.cs">
+      <DependentUpon>frmCultivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsumos.Designer.cs" />
+    <Compile Include="frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventario.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormEmpleados.resx">
@@ -82,6 +96,11 @@
     <EmbeddedResource Include="FormRoles.resx">
       <DependentUpon>FormRoles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCultivos.resx">
+      <DependentUpon>frmCultivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsumos.resx" />
+    <EmbeddedResource Include="frmInventario.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -50,8 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDConnection.cs" />
+    <Compile Include="CDCultivos.cs" />
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDGranja.cs" />
+    <Compile Include="CDInsumos.cs" />
+    <Compile Include="CDInventario.cs" />
     <Compile Include="CDRoles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
