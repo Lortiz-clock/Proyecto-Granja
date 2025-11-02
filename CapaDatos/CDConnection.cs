@@ -11,7 +11,7 @@ namespace CapaDatos
     public class CDConnection
     {
         //private SqlConnection db_conexion = new SqlConnection("Data Source=DESKTOP-LVVM941\\SQLEXPRESS;Initial Catalog=db_GranjasSA;Integrated Security=True;Encrypt=False");
-        private SqlConnection db_conexion = new SqlConnection("Data Source=USUARIO\\DAVID_SARMIENTOS;Initial Catalog=db_GranjasSA;Integrated Security=True;Encrypt=False");
+        private SqlConnection db_conexion = new SqlConnection("Data Source=RAFAEL\\SQLEXPRESS; Initial Catalog=db_GranjasSA;Integrated Security=True;Encrypt=False");
         public SqlConnection MtdAbrirConexion()
         {
             if (db_conexion.State == ConnectionState.Closed)
