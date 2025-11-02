@@ -165,7 +165,6 @@
             // 
             this.txtCodigoGranja.Location = new System.Drawing.Point(142, 44);
             this.txtCodigoGranja.Name = "txtCodigoGranja";
-            this.txtCodigoGranja.ReadOnly = true;
             this.txtCodigoGranja.Size = new System.Drawing.Size(134, 20);
             this.txtCodigoGranja.TabIndex = 63;
             // 
@@ -508,6 +507,7 @@
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleados.Size = new System.Drawing.Size(778, 199);
             this.dgvEmpleados.TabIndex = 69;
+            this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellClick);
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
             // 
             // groupBox1
