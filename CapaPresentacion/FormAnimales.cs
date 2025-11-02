@@ -23,6 +23,7 @@ namespace CapaPresentacion
 
         private void FormAnimales_Load(object sender, EventArgs e)
         {
+            MtdMostrarListaGranjas();
             MtdCargarDatos();
             lblFecha.Text = CdAnimales.MtdFechaHoy().ToString("d");
         }
@@ -173,5 +174,17 @@ namespace CapaPresentacion
                 MensajeTryCatch();
             }
         }
+
+        private void MtdMostrarListaGranjas()
+        {
+            var ListaGranjas = CdAnimales.MtdListaGranja();
+            foreach (var Granja in ListaGranjas)
+            {
+                cboxCodigoGranja.Items.Add(Granja);
+            }
+            cboxCodigoGranja.DisplayMember = "Text";
+            cboxCodigoGranja.ValueMember = "Value";
+        }
+
     }
 }

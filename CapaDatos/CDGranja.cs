@@ -76,5 +76,46 @@ namespace CapaDatos
             conn.MtdCerrarConexion();
         }
 
+        public List<dynamic> MtdListaGranja()
+        {
+            List<dynamic> ListaGranja = new List<dynamic>();
+            string QueryListaGranja = "select * from tbl_Granja";
+            SqlCommand lc = new SqlCommand(QueryListaGranja, conn.MtdAbrirConexion());
+            SqlDataReader reader = lc.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaGranja.Add(new
+                {
+                    Value = reader["CodigoGranja"],
+                    Text = $"{reader["CodigoGranja"]} - {reader["EstadoGranja"]}"
+                });
+            }
+            conn.MtdCerrarConexion();
+            return ListaGranja;
+        }
+
+        public string MtdListasGranjaDgv(int CodigoGranja)
+        {
+            string resultado = string.Empty;
+            string QueryListaGranja = "select * from tbl_Granja where CodigoGranja = @CodigoGranja";
+            SqlCommand cmd = new SqlCommand(QueryListaGranja, conn.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoGranja", CodigoGranja);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                string codigo = reader["CodigoGranja"].ToString();
+                string nombre = reader["EstadoGranja"].ToString();
+                resultado = $"{codigo} - {nombre}";
+            }
+            else
+            {
+                resultado = string.Empty;
+            }
+            conn.MtdCerrarConexion();
+            return resultado;
+
+        }
     }
 }
