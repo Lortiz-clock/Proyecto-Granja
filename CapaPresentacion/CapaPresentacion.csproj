@@ -71,6 +71,12 @@
     <Compile Include="FormGranja.Designer.cs">
       <DependentUpon>FormGranja.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPagoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPagoVentas.Designer.cs">
+      <DependentUpon>FormPagoVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGranja.resx">
       <DependentUpon>FormGranja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPagoVentas.resx">
+      <DependentUpon>FormPagoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
