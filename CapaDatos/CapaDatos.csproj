@@ -56,6 +56,8 @@
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDEnvios.cs" />
     <Compile Include="CDGranja.cs" />
+    <Compile Include="CDInsumos.cs" />
+    <Compile Include="CDInventario.cs" />
     <Compile Include="CDPagoVentas.cs" />
     <Compile Include="CDProductos.cs" />
     <Compile Include="CDRoles.cs" />
