@@ -19,11 +19,7 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void FormRol_Load(object sender, EventArgs e)
-        {
-            MtdCargarDatos();
-            lblFecha.Text = CdRoles.MtdFechaHoy().ToString("d");
-        }
+       
 
         public void MtdCargarDatos()
         {
@@ -156,6 +152,12 @@ namespace CapaPresentacion
                 MtdLimpiarCampos();
                 MensajeTryCatch();
             }
+        }
+
+        private void FormRoles_Load(object sender, EventArgs e)
+        {
+            MtdCargarDatos();
+            lblFecha.Text = CdRoles.MtdFechaHoy().ToString("d");
         }
     }
 }

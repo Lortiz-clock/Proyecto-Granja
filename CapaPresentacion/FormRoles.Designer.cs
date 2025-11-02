@@ -279,6 +279,7 @@
             this.Controls.Add(this.dgvRoll);
             this.Name = "FormRoles";
             this.Text = "FormRoles";
+            this.Load += new System.EventHandler(this.FormRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoll)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
