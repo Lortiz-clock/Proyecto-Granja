@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnimales.Designer.cs">
+      <DependentUpon>FormAnimales.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAnimales.resx">
+      <DependentUpon>FormAnimales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEmpleados.resx">
       <DependentUpon>FormEmpleados.cs</DependentUpon>
     </EmbeddedResource>
