@@ -52,6 +52,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="ClPagoVenta.cs" />
     <Compile Include="CLProductos.cs" />
+    <Compile Include="CLVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
