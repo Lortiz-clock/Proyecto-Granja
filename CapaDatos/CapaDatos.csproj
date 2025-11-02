@@ -55,6 +55,7 @@
     <Compile Include="CDEnvios.cs" />
     <Compile Include="CDGranja.cs" />
     <Compile Include="CDPagoVentas.cs" />
+    <Compile Include="CDProductos.cs" />
     <Compile Include="CDRoles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
