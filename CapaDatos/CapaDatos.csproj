@@ -49,6 +49,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDAnimales.cs" />
     <Compile Include="CDClientes.cs" />
     <Compile Include="CDConnection.cs" />
     <Compile Include="CDCultivos.cs" />
