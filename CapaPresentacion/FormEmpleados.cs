@@ -71,7 +71,7 @@ namespace CapaPresentacion
             txtCorr.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
             txtCargo.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
             txtFechaIngreso.Text = Convert.ToDateTime(dgvEmpleados.CurrentRow.Cells[6].Value).ToString("yyyy-MM-dd");
-            cboxEstado.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
+            cboxEsta.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace CapaPresentacion
         {
             try
             {
-                if (txtCodigoEmpleado.Text == "" || txtCodigoGranja.Text == "" || txtNombreEmpleado.Text == "" || txtTel.Text == "" || txtCorr.Text == "" || txtCargo.Text == "" || txtFechaIngreso.Text == "" || cboxEstado.Text == "")
+                if (txtCodigoEmpleado.Text == "" || txtCodigoGranja.Text == "" || txtNombreEmpleado.Text == "" || txtTel.Text == "" || txtCorr.Text == "" || txtCargo.Text == "" || txtFechaIngreso.Text == "" || cboxEsta.Text == "")
                 {
                     MensajeCamposVacios();
                 }
