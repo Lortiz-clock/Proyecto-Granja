@@ -50,9 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="LNCultivos.cs" />
+    <Compile Include="LNInsumos.cs" />
     <Compile Include="ClPagoVenta.cs" />
     <Compile Include="CLProductos.cs" />
     <Compile Include="CLVentas.cs" />
+    <Compile Include="LNInventario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
