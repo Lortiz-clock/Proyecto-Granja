@@ -64,14 +64,7 @@ namespace CapaPresentacion
         private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            txtCodigoEmpleado.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-            txtCodigoGranja.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
-            txtNombreEmpleado.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
-            txtTel.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
-            txtCorr.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
-            txtCargo.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
-            txtFechaIngreso.Text = Convert.ToDateTime(dgvEmpleados.CurrentRow.Cells[6].Value).ToString("yyyy-MM-dd");
-            cboxEsta.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
+           
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -171,6 +164,19 @@ namespace CapaPresentacion
                 MtdLimpiarCampos();
                 MensajeTryCatch();
             }
+        }
+
+        private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigoEmpleado.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            txtCodigoGranja.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
+            txtNombreEmpleado.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
+            txtTel.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
+            txtCorr.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
+            txtCargo.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
+            txtFechaIngreso.Text = Convert.ToDateTime(dgvEmpleados.CurrentRow.Cells[6].Value).ToString("yyyy-MM-dd");
+            cboxEsta.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
+
         }
     }
 }
