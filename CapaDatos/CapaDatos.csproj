@@ -53,13 +53,16 @@
     <Compile Include="CDClientes.cs" />
     <Compile Include="CDConnection.cs" />
     <Compile Include="CDCultivos.cs" />
+    <Compile Include="CdDetalleVenta.cs" />
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDEnvios.cs" />
     <Compile Include="CDGranja.cs" />
     <Compile Include="CDInsumos.cs" />
     <Compile Include="CDInventario.cs" />
+    <Compile Include="CdPagoEmpleados.cs" />
     <Compile Include="CDPagoVentas.cs" />
     <Compile Include="CDProductos.cs" />
+    <Compile Include="CdProveedores.cs" />
     <Compile Include="CDRoles.cs" />
     <Compile Include="CDVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
