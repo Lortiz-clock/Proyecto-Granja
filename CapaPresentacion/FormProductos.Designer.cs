@@ -33,6 +33,9 @@
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.lblTotalVenta = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.cboxTipoProducto = new System.Windows.Forms.ComboBox();
             this.cboxCodigoGranja = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,9 +45,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.lblFecha = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.dgvSistemaProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSistemaProductos)).BeginInit();
@@ -73,6 +78,7 @@
             this.cboxNombreProducto.Name = "cboxNombreProducto";
             this.cboxNombreProducto.Size = new System.Drawing.Size(134, 23);
             this.cboxNombreProducto.TabIndex = 63;
+            this.cboxNombreProducto.SelectedIndexChanged += new System.EventHandler(this.cboxNombreProducto_SelectedIndexChanged);
             // 
             // cboxEstado
             // 
@@ -109,6 +115,54 @@
             this.txtCodigoProducto.Size = new System.Drawing.Size(134, 21);
             this.txtCodigoProducto.TabIndex = 26;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
+            this.btnCancelar.IconColor = System.Drawing.Color.Black;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 25;
+            this.btnCancelar.Location = new System.Drawing.Point(627, 89);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(84, 31);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btnEditar.IconColor = System.Drawing.Color.Black;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditar.IconSize = 25;
+            this.btnEditar.Location = new System.Drawing.Point(627, 53);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(84, 31);
+            this.btnEditar.TabIndex = 16;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnGuardar.IconColor = System.Drawing.Color.Black;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.IconSize = 25;
+            this.btnGuardar.Location = new System.Drawing.Point(627, 17);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(84, 31);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // cboxTipoProducto
             // 
             this.cboxTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,6 +190,9 @@
             this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.lblTotalVenta);
             this.groupBox1.Controls.Add(this.txtCodigoProducto);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.cboxTipoProducto);
             this.groupBox1.Controls.Add(this.cboxCodigoGranja);
             this.groupBox1.Controls.Add(this.label7);
@@ -144,7 +201,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(11, 70);
+            this.groupBox1.Location = new System.Drawing.Point(11, 52);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -218,11 +275,27 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Codigo Producto:";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 25;
+            this.btnEliminar.Location = new System.Drawing.Point(551, 396);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(84, 31);
+            this.btnEliminar.TabIndex = 55;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(616, 41);
+            this.lblFecha.Location = new System.Drawing.Point(616, 23);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(100, 16);
@@ -233,7 +306,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(518, 41);
+            this.label8.Location = new System.Drawing.Point(518, 23);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 16);
@@ -244,24 +317,41 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 41);
+            this.label1.Location = new System.Drawing.Point(148, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(336, 25);
             this.label1.TabIndex = 51;
             this.label1.Text = "PRODUCTOS GRANJAS \"S.A\"";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnSalir.IconColor = System.Drawing.Color.Black;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 25;
+            this.btnSalir.Location = new System.Drawing.Point(640, 396);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(84, 31);
+            this.btnSalir.TabIndex = 56;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // dgvSistemaProductos
             // 
             this.dgvSistemaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSistemaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSistemaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvSistemaProductos.Location = new System.Drawing.Point(11, 210);
+            this.dgvSistemaProductos.Location = new System.Drawing.Point(11, 192);
             this.dgvSistemaProductos.Name = "dgvSistemaProductos";
             this.dgvSistemaProductos.ReadOnly = true;
             this.dgvSistemaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSistemaProductos.Size = new System.Drawing.Size(778, 199);
-            this.dgvSistemaProductos.TabIndex = 55;
+            this.dgvSistemaProductos.TabIndex = 57;
+            this.dgvSistemaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSistemaProductos_CellClick);
             // 
             // FormProductos
             // 
@@ -269,9 +359,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvSistemaProductos);
             this.Name = "FormProductos";
             this.Text = "FormProductos";
@@ -291,6 +383,9 @@
         private System.Windows.Forms.ComboBox cboxEstado;
         private System.Windows.Forms.Label lblTotalVenta;
         private System.Windows.Forms.TextBox txtCodigoProducto;
+        private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnEditar;
+        private FontAwesome.Sharp.IconButton btnGuardar;
         private System.Windows.Forms.ComboBox cboxTipoProducto;
         private System.Windows.Forms.ComboBox cboxCodigoGranja;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -300,9 +395,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.DataGridView dgvSistemaProductos;
     }
 }

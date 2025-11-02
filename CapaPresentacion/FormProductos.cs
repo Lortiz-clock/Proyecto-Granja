@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDatos;
-using CapaLogica;
-
 
 namespace CapaPresentacion
 {
@@ -21,9 +20,8 @@ namespace CapaPresentacion
 
         public FormProductos()
         {
-
             InitializeComponent();
-
+            
             MtdCargarDatos();
 
             lblFecha.Text = cl_Productos.MtdFecha();
@@ -33,20 +31,11 @@ namespace CapaPresentacion
                 cboxTipoProducto.SelectedIndex = 0;
         }
 
-        private void cboxTipoProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
         public void MtdCargarDatos()
         {
             DataTable dtCargarDatos = cd_Productos.MtdConsultaProductos();
             dgvSistemaProductos.DataSource = dtCargarDatos;
         }
-
-
 
         //Metodo para Mostrar Mensajes en Pantalla
         public void MensajeLimpiarCampos()
@@ -66,8 +55,6 @@ namespace CapaPresentacion
             MessageBox.Show("Acción ejecutada, información actualizada en la Base de Datos", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
-
         private void MtdLimpiarCampos()
         {
             cboxCodigoGranja.Text = "";
@@ -75,6 +62,11 @@ namespace CapaPresentacion
             cboxNombreProducto.Text = "";
             txtDescripcionProducto.Text = "";
             cboxEstado.Text = "";
+        }
+
+        private void FormProductos_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void cboxNombreProducto_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,12 +112,6 @@ namespace CapaPresentacion
             {
                 txtDescripcionProducto.Text = string.Empty;
             }
-
-        }
-
-        private void FormProductos_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -156,12 +142,6 @@ namespace CapaPresentacion
                 MtdLimpiarCampos();
                 MensajeTryCatch();
             }
-        }
-
-        private void dgvSistemaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -249,7 +229,8 @@ namespace CapaPresentacion
                 cboxEstado.Text = dgvSistemaProductos.SelectedCells[5].Value.ToString();
 
             }
-
         }
+
+
     }
 }
